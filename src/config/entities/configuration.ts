@@ -66,6 +66,8 @@ export default () => ({
             8453: { nativeCoin: 'ethereum', chainName: 'base' },
             84531: { nativeCoin: 'ethereum', chainName: 'base' },
             84532: { nativeCoin: 'ethereum', chainName: 'base' },
+            1001: { nativeCoin: 'klay-token', chainName: 'klaytn' },
+            8217: { nativeCoin: 'klay-token', chainName: 'klaytn' },
           },
           highRefreshRateTokens:
             process.env.HIGH_REFRESH_RATE_TOKENS?.split(',') ?? [],
