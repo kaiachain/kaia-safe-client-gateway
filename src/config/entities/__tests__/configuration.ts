@@ -101,6 +101,14 @@ export default (): ReturnType<typeof configuration> => ({
               nativeCoin: faker.string.sample(),
               chainName: faker.string.sample(),
             },
+            1001: {
+              nativeCoin: faker.string.sample(),
+              chainName: faker.string.sample(),
+            },
+            8217: {
+              nativeCoin: faker.string.sample(),
+              chainName: faker.string.sample(),
+            }
           },
           highRefreshRateTokens: [],
           highRefreshRateTokensTtlSeconds: faker.number.int(),
