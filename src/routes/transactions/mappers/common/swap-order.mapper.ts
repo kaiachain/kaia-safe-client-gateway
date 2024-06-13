@@ -29,6 +29,10 @@ export class SwapOrderMapper {
       orderUid,
     });
 
+    if (!this.swapOrderHelper.isAppAllowed(order)) {
+      throw new Error(`Unsupported App: ${order.fullAppData?.appCode}`);
+    }
+
     return new SwapOrderTransactionInfo({
       uid: order.uid,
       orderStatus: order.status,
@@ -57,6 +61,8 @@ export class SwapOrderMapper {
       }),
       explorerUrl: this.swapOrderHelper.getOrderExplorerUrl(order),
       executedSurplusFee: order.executedSurplusFee?.toString() ?? null,
+      receiver: order.receiver,
+      owner: order.owner,
       fullAppData: order.fullAppData,
     });
   }

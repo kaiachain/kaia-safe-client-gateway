@@ -1,25 +1,15 @@
-[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
-
-# NO LONGER MAINTAINED
-
-Since the launch of Kaia Blockchain this repository has been parked in favour of the new open-source projects in [Kaia's Github](https://github.com/kaiachain). Contributors have now moved there continuing with massive open-source contributions to our blockchain ecosystem. A big thank you to everyone who has contributed to this repository. For more information about Klaytn's chain merge with Finschia blockchain please refer to the launching of Kaia blockchain - [kaia.io](http://kaia.io/).
-
----
-
-# Safe Client Gateway
-
-[![Coverage Status](https://coveralls.io/repos/github/safe-global/safe-client-gateway/badge.svg?branch=main)](https://coveralls.io/github/safe-global/safe-client-gateway?branch=main)
+# Kaia Safe Client Gateway
 
 ## Motivation
 
-The Safe Client Gateway serves as a bridge for the Safe{Wallet} clients (Android, iOS, Web).
+The Kaia Safe Client Gateway serves as a bridge for the Safe{Wallet} clients (Android, iOS, Web).
 
 It provides UI-oriented mappings and data structures for easier integration with several Safe{Core} services. In essence, it works as a bridge between the frontend and backend, ensuring smooth, efficient data exchange.
 
 ## Documentation
 
-- [Client Gateway OpenAPI specification](https://safe-client.safe.global/index.html)
-- [Deploying the service](https://github.com/safe-global/safe-infrastructure)
+- [Client Gateway OpenAPI specification](https://safe-gateway.kaia.io/cgw/api)
+- [Deploying the service](https://github.com/kaiachain/kaia-safe-infrastructure)
 
 ## Requirements
 
@@ -51,7 +41,7 @@ yarn generate-abis
 docker compose up -d redis
 ```
 
-2. Start the Safe Client Gateway
+2. Start the Kaia Safe Client Gateway
 
 ```bash
 # development

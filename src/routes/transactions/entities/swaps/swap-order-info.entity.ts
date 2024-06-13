@@ -22,6 +22,8 @@ export interface OrderInfo {
   executedBuyAmount: string;
   explorerUrl: URL;
   executedSurplusFee: string | null;
+  receiver: string | null;
+  owner: `0x${string}`;
   fullAppData: Record<string, unknown> | null;
 }
 
@@ -92,6 +94,18 @@ export class SwapOrderTransactionInfo
   executedSurplusFee: string | null;
 
   @ApiPropertyOptional({
+    type: String,
+    nullable: true,
+    description: 'The (optional) address to receive the proceeds of the trade',
+  })
+  receiver: string | null;
+
+  @ApiProperty({
+    type: String,
+  })
+  owner: `0x${string}`;
+
+  @ApiPropertyOptional({
     type: Object,
     nullable: true,
     description: 'The App Data for this order',
@@ -112,6 +126,8 @@ export class SwapOrderTransactionInfo
     buyToken: TokenInfo;
     explorerUrl: URL;
     executedSurplusFee: string | null;
+    receiver: string | null;
+    owner: `0x${string}`;
     fullAppData: Record<string, unknown> | null;
   }) {
     super(TransactionInfoType.SwapOrder, null, null);
@@ -128,6 +144,8 @@ export class SwapOrderTransactionInfo
     this.buyToken = args.buyToken;
     this.explorerUrl = args.explorerUrl;
     this.executedSurplusFee = args.executedSurplusFee;
+    this.receiver = args.receiver;
+    this.owner = args.owner;
     this.fullAppData = args.fullAppData;
   }
 }
